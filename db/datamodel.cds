@@ -17,10 +17,6 @@ context master {
         BP_ID: String(32);	
         COMPANY_NAME: String(250);
     }
-    annotate businesspartner with {
-        NODE_KEY @title: 'i18n>bp_key';
-        BP_ROLE @title: 'i18n>bp_role';
-    }
     entity address {
         key NODE_KEY: Guid;
         CITY: String(44);
@@ -60,7 +56,7 @@ context master {
         DIM_UNIT:String(2);
     }
 
-    entity employees: cuid, temporal {
+    entity employees: cuid {
         nameFirst: String(40);
         nameMiddle: String(40);	
         nameLast: String(40);	
